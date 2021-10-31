@@ -1,0 +1,23 @@
+{
+  "root": "libs/spotify-data-access",
+  "sourceRoot": "libs/spotify-data-access/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/spotify-data-access/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/spotify-data-access"],
+      "options": {
+        "jestConfig": "libs/spotify-data-access/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

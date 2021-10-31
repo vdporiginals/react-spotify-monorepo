@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "react-spotify": "apps/react-spotify",
-    "react-spotify-e2e": "apps/react-spotify-e2e"
+    "react-spotify-e2e": "apps/react-spotify-e2e",
+    "spotify-data-access": "libs/spotify-data-access"
   }
 }

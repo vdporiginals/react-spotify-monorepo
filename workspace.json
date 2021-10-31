@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "react-spotify": "apps/react-spotify",
+    "react-spotify-e2e": "apps/react-spotify-e2e"
+  }
+}

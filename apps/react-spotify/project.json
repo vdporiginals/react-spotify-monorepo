@@ -1,0 +1,72 @@
+{
+  "root": "apps/react-spotify",
+  "sourceRoot": "apps/react-spotify/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/react-spotify",
+        "index": "apps/react-spotify/src/index.html",
+        "baseHref": "/",
+        "main": "apps/react-spotify/src/main.tsx",
+        "polyfills": "apps/react-spotify/src/polyfills.ts",
+        "tsConfig": "apps/react-spotify/tsconfig.app.json",
+        "assets": [
+          "apps/react-spotify/src/favicon.ico",
+          "apps/react-spotify/src/assets"
+        ],
+        "styles": ["apps/react-spotify/src/styles.scss"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/react-spotify/src/environments/environment.ts",
+              "with": "apps/react-spotify/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "react-spotify:build",
+        "hmr": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "react-spotify:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/react-spotify/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/react-spotify"],
+      "options": {
+        "jestConfig": "apps/react-spotify/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

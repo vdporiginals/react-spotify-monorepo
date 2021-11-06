@@ -1,0 +1,25 @@
+{
+  "root": "libs/web/shell/feature/web-layout",
+  "sourceRoot": "libs/web/shell/feature/web-layout/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/web/shell/feature/web-layout/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/web/shell/feature/web-layout"],
+      "options": {
+        "jestConfig": "libs/web/shell/feature/web-layout/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

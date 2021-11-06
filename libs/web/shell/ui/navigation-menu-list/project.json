@@ -1,0 +1,25 @@
+{
+  "root": "libs/web/shell/ui/navigation-menu-list",
+  "sourceRoot": "libs/web/shell/ui/navigation-menu-list/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/web/shell/ui/navigation-menu-list/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/web/shell/ui/navigation-menu-list"],
+      "options": {
+        "jestConfig": "libs/web/shell/ui/navigation-menu-list/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

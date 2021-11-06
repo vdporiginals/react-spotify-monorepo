@@ -1,0 +1,25 @@
+{
+  "root": "libs/web/shell/ui/player-playback",
+  "sourceRoot": "libs/web/shell/ui/player-playback/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/web/shell/ui/player-playback/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/web/shell/ui/player-playback"],
+      "options": {
+        "jestConfig": "libs/web/shell/ui/player-playback/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "root": "libs/web/shell/ui/main-view",
+  "sourceRoot": "libs/web/shell/ui/main-view/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/web/shell/ui/main-view/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/web/shell/ui/main-view"],
+      "options": {
+        "jestConfig": "libs/web/shell/ui/main-view/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

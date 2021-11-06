@@ -6,7 +6,6 @@ import { WebShellUiPlayerPlayback } from '@react-spotify/ui/player-playback';
 import { WebShellUiTrackInfo } from '@react-spotify/ui/track-info';
 import { WebShellUiNavigationMenuList } from '@react-spotify/ui/navigation-menu-list';
 import { WebShellUiPlayerControl } from '@react-spotify/ui/player-control';
-import { WebShellUiNavigationPlaylist } from '@react-spotify/ui/navigation-playlist';
 import { WebShellUiPlayingBar } from '@react-spotify/ui/playing-bar';
 import { WebShellUiPlayerUtility } from '@react-spotify/ui/player-utility';
 import { WebShellUiTopHeader } from '@react-spotify/ui/top-header';
@@ -100,10 +99,10 @@ export function App() {
              component={WebShellUiTopHeader} />
       <Route path='/main-view'
              component={WebShellUiMainView} />
-      <Route
-        path='/navigation-playlist'
-        component={WebShellUiNavigationPlaylist}
-      />
+      {/*<Route*/}
+      {/*  path='/navigation-playlist'*/}
+      {/*  component={WebShellUiNavigationPlaylist}*/}
+      {/*/>*/}
       <Route
         path='/navigation-menu-list'
         component={WebShellUiNavigationMenuList}

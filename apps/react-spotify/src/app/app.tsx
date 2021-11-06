@@ -1,4 +1,5 @@
 import { Link, Route } from 'react-router-dom';
+import './styles.css';
 import { WebShellUiNavigationBar } from '@react-spotify/ui/navigation-bar';
 import { WebShellFeatureWebLayout } from '@react-spotify/shell/feature/web-layout';
 import { WebShellUiMainView } from '@react-spotify/ui/main-view';

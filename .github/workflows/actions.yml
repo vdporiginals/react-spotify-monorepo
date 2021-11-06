@@ -22,10 +22,10 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '14'
-      - run: yarn install
+      - run: npm install
       - run: npx nx-cloud start-ci-run
-      - run: yarn affected --target=deploy --parallel --max-parallel=3
-      - run: yarn affected --target=test --parallel --max-parallel=2
+      - run: npx nx affected --target=build --parallel --max-parallel=3
+      - run: npx nx affected --target=test --parallel --max-parallel=2
       - run: npx nx-cloud stop-all-agents
   pr:
     runs-on: ubuntu-latest
@@ -40,10 +40,10 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '14'
-      - run: yarn install
+      - run: npm install
       - run: npx nx-cloud start-ci-run
-      - run: yarn affected --target=deploy --parallel --max-parallel=3
-      - run: yarn affected --target=test --parallel --max-parallel=2
+      - run: npx nx affected --target=build --parallel --max-parallel=3
+      - run: npx nx affected --target=test --parallel --max-parallel=2
       - run: npx nx-cloud stop-all-agents
   agents:
     runs-on: ubuntu-latest
@@ -57,6 +57,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '14'
-      - run: yarn install
+      - run: npm install
       - name: Start Nx Agent ${{ matrix.agent }}
         run: npx nx-cloud start-agent

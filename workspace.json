@@ -3,6 +3,16 @@
   "projects": {
     "react-spotify": "apps/react-spotify",
     "react-spotify-e2e": "apps/react-spotify-e2e",
-    "spotify-data-access": "libs/spotify-data-access"
+    "web-shell-feature-web-layout": "libs/web/shell/feature/web-layout",
+    "web-shell-ui-main-view": "libs/web/shell/ui/main-view",
+    "web-shell-ui-navigation-bar": "libs/web/shell/ui/navigation-bar",
+    "web-shell-ui-navigation-menu-list": "libs/web/shell/ui/navigation-menu-list",
+    "web-shell-ui-navigation-playlist": "libs/web/shell/ui/navigation-playlist",
+    "web-shell-ui-player-control": "libs/web/shell/ui/player-control",
+    "web-shell-ui-player-playback": "libs/web/shell/ui/player-playback",
+    "web-shell-ui-player-utility": "libs/web/shell/ui/player-utility",
+    "web-shell-ui-playing-bar": "libs/web/shell/ui/playing-bar",
+    "web-shell-ui-top-header": "libs/web/shell/ui/top-header",
+    "web-shell-ui-track-info": "libs/web/shell/ui/track-info"
   }
 }

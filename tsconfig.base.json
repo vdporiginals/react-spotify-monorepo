@@ -15,7 +15,39 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@spotify/spotify-data-access": ["libs/spotify-data-access/src/index.ts"]
+      "@react-spotify/shell/feature/web-layout": [
+        "libs/web/shell/feature/web-layout/src/index.ts"
+      ],
+      "@react-spotify/ui/main-view": [
+        "libs/web/shell/ui/main-view/src/index.ts"
+      ],
+      "@react-spotify/ui/navigation-bar": [
+        "libs/web/shell/ui/navigation-bar/src/index.ts"
+      ],
+      "@react-spotify/ui/navigation-menu-list": [
+        "libs/web/shell/ui/navigation-menu-list/src/index.ts"
+      ],
+      "@react-spotify/ui/navigation-playlist": [
+        "libs/web/shell/ui/navigation-playlist/src/index.ts"
+      ],
+      "@react-spotify/ui/player-control": [
+        "libs/web/shell/ui/player-control/src/index.ts"
+      ],
+      "@react-spotify/ui/player-playback": [
+        "libs/web/shell/ui/player-playback/src/index.ts"
+      ],
+      "@react-spotify/ui/player-utility": [
+        "libs/web/shell/ui/player-utility/src/index.ts"
+      ],
+      "@react-spotify/ui/playing-bar": [
+        "libs/web/shell/ui/playing-bar/src/index.ts"
+      ],
+      "@react-spotify/ui/top-header": [
+        "libs/web/shell/ui/top-header/src/index.ts"
+      ],
+      "@react-spotify/ui/track-info": [
+        "libs/web/shell/ui/track-info/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

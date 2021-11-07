@@ -15,13 +15,19 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         name: Checkout [main]
-      - uses: netlify/actions/diff-includes@master
+      - uses: nwtgck/actions-netlify@v1.2
         with:
+          publish-dir: './dist/apps/react-spotify'
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+          enable-pull-request-comment: false
+          enable-commit-comment: true
+          overwrites-pull-request-comment: true
+        env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_DEPLOY_MESSAGE: "Prod deploy v${{ github.ref }}"
-          deploy_alias: ${{ env.BRANCH_NAME }}
-          NETLIFY_DEPLOY_TO_PROD: true
+          timeout-minutes: 1
       - name: Derive appropriate SHAs for base and head for `nx affected` commands
         uses: nrwl/nx-set-shas@v2
       - uses: actions/setup-node@v1
@@ -38,13 +44,19 @@ jobs:
     if: ${{ github.event_name == 'pull_request' }}
     steps:
       - uses: actions/checkout@v2
-      - uses: netlify/actions/diff-includes@master
+      - uses: nwtgck/actions-netlify@v1.2
         with:
+          publish-dir: './dist/apps/react-spotify'
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+          enable-pull-request-comment: false
+          enable-commit-comment: true
+          overwrites-pull-request-comment: true
+        env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_DEPLOY_MESSAGE: "Prod deploy v${{ github.ref }}"
-          deploy_alias: ${{ env.BRANCH_NAME }}
-          NETLIFY_DEPLOY_TO_PROD: true
+          timeout-minutes: 1
       - name: Derive appropriate SHAs for base and head for `nx affected` commands
         uses: nrwl/nx-set-shas@v2
       - uses: actions/setup-node@v1

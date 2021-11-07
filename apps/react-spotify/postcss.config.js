@@ -1,6 +1,10 @@
+const { join } = require('path');
+
 module.exports = {
   plugins: {
-    tailwindcss: { config: './apps/react-spotify/tailwind.config.js' },
-    autoprefixer: {},
-  },
+    tailwindcss: {
+      config: join(__dirname, 'tailwind.config.js')
+    },
+    autoprefixer: {}
+  }
 };

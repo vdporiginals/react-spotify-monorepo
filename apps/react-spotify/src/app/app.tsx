@@ -1,15 +1,4 @@
 import { Link, Route } from 'react-router-dom';
-import { WebShellUiNavigationBar } from '@react-spotify/ui/navigation-bar';
-import { WebShellFeatureWebLayout } from '@react-spotify/shell/feature/web-layout';
-import { WebShellUiMainView } from '@react-spotify/ui/main-view';
-import { WebShellUiPlayerPlayback } from '@react-spotify/ui/player-playback';
-import { WebShellUiTrackInfo } from '@react-spotify/ui/track-info';
-import { WebShellUiNavigationMenuList } from '@react-spotify/ui/navigation-menu-list';
-import { WebShellUiPlayerControl } from '@react-spotify/ui/player-control';
-import { WebShellUiNavigationPlaylist } from '@react-spotify/ui/navigation-playlist';
-import { WebShellUiPlayingBar } from '@react-spotify/ui/playing-bar';
-import { WebShellUiPlayerUtility } from '@react-spotify/ui/player-utility';
-import { WebShellUiTopHeader } from '@react-spotify/ui/top-header';
 
 export function App() {
   return (
@@ -84,41 +73,7 @@ export function App() {
           </div>
         )}
       />
-      <Route path='/web-layout'
-             component={WebShellFeatureWebLayout} />
-      <Route path='/player-utility'
-             component={WebShellUiPlayerUtility} />
-      <Route path='/player-playback'
-             component={WebShellUiPlayerPlayback} />
-      <Route path='/player-control'
-             component={WebShellUiPlayerControl} />
-      <Route path='/track-info'
-             component={WebShellUiTrackInfo} />
-      <Route path='/playing-bar'
-             component={WebShellUiPlayingBar} />
-      <Route path='/top-header'
-             component={WebShellUiTopHeader} />
-      <Route path='/main-view'
-             component={WebShellUiMainView} />
-      <Route
-        path='/navigation-playlist'
-        component={WebShellUiNavigationPlaylist}
-      />
-      <Route
-        path='/navigation-menu-list'
-        component={WebShellUiNavigationMenuList}
-      />
-      <Route path='/navigation-bar'
-             component={WebShellUiNavigationBar} />
-      <Route
-        path='/page-2'
-        exact
-        render={() => (
-          <div>
-            <Link to='/'>Click here to go back to root page.</Link>
-          </div>
-        )}
-      />
+
       {/* END: routes */}
     </button>
   );

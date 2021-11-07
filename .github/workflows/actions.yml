@@ -13,9 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event_name != 'pull_request' }}
     steps:
-      - uses: jsmrcaga/action-netlify-deploy@v1.6.0
       - uses: actions/checkout@v2
         name: Checkout [main]
+      - uses: netlify/actions/diff-includes@master
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
@@ -37,8 +37,8 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'pull_request' }}
     steps:
-      - uses: jsmrcaga/action-netlify-deploy@v1.6.0
       - uses: actions/checkout@v2
+      - uses: netlify/actions/diff-includes@master
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
